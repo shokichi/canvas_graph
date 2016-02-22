@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <title>サンプルページページ</title>
+    <link rel="stylesheet" type="text/css" href="../css/sample.css">
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js">
+      $(jQuery_version).click(function{
+        document.write("jQuery"+$.fn.jquery);
+      });
+    </script>
+    <script src="./canvas_sample.js"></script>
+  </head>
+<body onload="canvas_sample()">
+  <h1>サンプルページ</h1>
+  動作確認のテストページです.<br>
+  <h2>Canvas</h2>
+  <canvas id="canvassample" width="300" height="140"></canvas>
+  <h3>格子の作成</h3>
+  <form name="gridgen">
+    <p>格子サイズ:<input type="text" name="imax" size="4" value="10">,<input type="text" name="jmax" size="4" value="10"><br>
+    <input type="button" value="格子生成" onClick="grid_generate()"></p>
+  </form>
+  <canvas id="canvas_grid" width="600" height="600"></canvas>
+  <!--
+  <h2>jQuery</h2>
+  <form name="jquery_test">
+    <p><input type="button" name="jQuery_version" value="jQueryバージョン確認"></p>
+  </form>
+  -->
+</body>
+</html>
